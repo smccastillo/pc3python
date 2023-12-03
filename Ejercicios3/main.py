@@ -1,7 +1,3 @@
-from Module.pc3 import CIRCULO
-
-circ1 = CIRCULO(4)
-
 from Module.operacionesMI import dividir
 
 def mostrar_opciones():
@@ -34,3 +30,30 @@ def main():
 if __name__ == "__main__":
     main()
 
+from Module.pc3 import Producto, Phone, Persona, CIRCULO, Catalogo
+
+rad = float(input("Ingrese el radio del círculo: "))
+circulo1 = CIRCULO(rad)
+
+area = circulo1.calcular_area()
+
+print(circulo1)
+print(f"Área del círculo: {area}")
+
+catalogo = Catalogo()
+prod1 = Producto("Motor", 1999.99)
+prod2 = Producto("Batería", 899.99)
+catalogo.agregar_producto(prod1)
+catalogo.agregar_producto(prod2)
+
+producto = Producto("Ejemplo", "PERU-0001-2023")
+print(producto)
+
+telf = Phone("Motorola", "G53", "16GB", "512 GB", "18 horas")
+telf.iniciar_llamada("123456789")
+telf.registrar_duracion_llamada(120)
+telf.finalizar_llamada()
+print(telf)
+
+pers1= Persona()
+print(pers1)
